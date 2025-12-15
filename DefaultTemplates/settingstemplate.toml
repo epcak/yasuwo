@@ -1,0 +1,34 @@
+[general]
+language = "en"
+theme = "system"
+onstartup = false
+startuptype = "minimized"
+interactiveselect = true
+
+[general.annotation]
+editortype = "buildin"
+editorpath = ""
+
+[general.backup]
+automatic = true
+freaquency = 7
+keep = 1
+path = ""
+
+[ocr]
+installation = "system"
+path = ""
+language = "eng"
+
+[shortcuts]
+
+[shortcuts.screenshots]
+everything = "<ctrl>+<alt>+<insert>"
+selectedarea = ""
+selectarea = ""
+area = "<ctrl>+<cmd>+<insert>"
+
+[shortcuts.windows]
+openmain = ""
+openproject = ""
+openview = ""

@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow_UI</class>
+ <widget class="QMainWindow" name="MainWindow_UI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>675</width>
+    <height>262</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Screenshot utility</string>
+  </property>
+  <property name="locale">
+   <locale language="English" country="World"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="MainWindow_CurrentLabel">
+        <property name="text">
+         <string>Current project is Default, group None.</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="MainWindow_ScreenshotEverythingButton">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Screenshot everything</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="MainWindow_ScreenshotSelectedButton">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Screenshot selected area</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="MainWindow_ScreenshotAreaButton">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Screenshot area</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="MainWindow_ViewScreenshotsButton">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>View screenshots</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_6">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Orientation::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <spacer name="horizontalSpacer_7">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="MainWindow_ManageShortcutsButton">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Manage shortcuts</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="MainWindow_SelectAreaButton">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Select screenshot area</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="MainWindow_CustomScreenshotsButton">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Custom screenshots</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_8">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>675</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="MainWindow_FileMenu">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="MainWindow_SettingsAction"/>
+    <addaction name="MainWindow_MinimizeAction"/>
+    <addaction name="MainWindow_QuitAction"/>
+   </widget>
+   <widget class="QMenu" name="MainWindow_ProjectsMenu">
+    <property name="title">
+     <string>Projects</string>
+    </property>
+    <widget class="QMenu" name="MainWindow_DefaultProjectMenu">
+     <property name="title">
+      <string>Default</string>
+     </property>
+     <addaction name="actionNo_group"/>
+    </widget>
+    <addaction name="MainWindow_DefaultProjectMenu"/>
+    <addaction name="separator"/>
+    <addaction name="MainWindow_ManageProjectsAction"/>
+   </widget>
+   <widget class="QMenu" name="MainWindow_ProfilesMenu">
+    <property name="title">
+     <string>Profiles</string>
+    </property>
+    <addaction name="MainWindow_DefaultProfileAction"/>
+    <addaction name="separator"/>
+    <addaction name="MainWindow_ManageProfilesAction"/>
+   </widget>
+   <widget class="QMenu" name="MainWindow_AboutMenu">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="MainWindow_AboutApplicationAction"/>
+    <addaction name="MainWindow_UsedLibrariesAction"/>
+    <addaction name="MainWindow_HelpAction"/>
+   </widget>
+   <addaction name="MainWindow_FileMenu"/>
+   <addaction name="MainWindow_ProjectsMenu"/>
+   <addaction name="MainWindow_ProfilesMenu"/>
+   <addaction name="MainWindow_AboutMenu"/>
+  </widget>
+  <widget class="QStatusBar" name="MainWindow_Statusbar"/>
+  <action name="MainWindow_AboutApplicationAction">
+   <property name="text">
+    <string>About application</string>
+   </property>
+  </action>
+  <action name="MainWindow_UsedLibrariesAction">
+   <property name="text">
+    <string>Used libraries</string>
+   </property>
+  </action>
+  <action name="MainWindow_DefaultProfileAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Defaut</string>
+   </property>
+  </action>
+  <action name="MainWindow_ManageProfilesAction">
+   <property name="text">
+    <string>Manage profiles</string>
+   </property>
+  </action>
+  <action name="MainWindow_ManageProjectsAction">
+   <property name="text">
+    <string>Manage projects</string>
+   </property>
+  </action>
+  <action name="actionNo_group">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>No group</string>
+   </property>
+  </action>
+  <action name="MainWindow_SettingsAction">
+   <property name="text">
+    <string>Settings</string>
+   </property>
+  </action>
+  <action name="MainWindow_MinimizeAction">
+   <property name="text">
+    <string>Minimize</string>
+   </property>
+  </action>
+  <action name="MainWindow_QuitAction">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="MainWindow_HelpAction">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
