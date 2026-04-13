@@ -71,16 +71,46 @@
            <x>0</x>
            <y>0</y>
            <width>810</width>
-           <height>121</height>
+           <height>152</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>
-           <widget class="QLabel" name="ScreenshotView_ImageLabel">
-            <property name="text">
-             <string>Image to be</string>
-            </property>
-           </widget>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <spacer name="horizontalSpacer_7">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="ScreenshotView_ImageLabel">
+              <property name="text">
+               <string>Image to be</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_8">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
           </item>
          </layout>
         </widget>
@@ -158,7 +188,7 @@
     </layout>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <layout class="QHBoxLayout" name="horizontalLayout_advance">
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_4">
        <item>
@@ -239,7 +269,7 @@
              <x>0</x>
              <y>0</y>
              <width>388</width>
-             <height>247</height>
+             <height>245</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -256,15 +286,7 @@
     </layout>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_7">
-     <item>
-      <widget class="QLabel" name="ScreenshotView_CreatedAtLabel">
-       <property name="text">
-        <string>Created at: 01.01.2000 00:00 Edited at: 01.01.2000 00:00</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    <layout class="QHBoxLayout" name="horizontalLayout_7"/>
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -276,9 +298,9 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="ScreenshotView_InFilesButton">
+      <widget class="QPushButton" name="ScreenshotView_ChangeProjectButton">
        <property name="text">
-        <string>View in files</string>
+        <string>Change project and group</string>
        </property>
       </widget>
      </item>

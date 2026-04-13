@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>658</width>
+    <height>468</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -64,11 +64,15 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>380</width>
-        <height>210</height>
+        <width>638</width>
+        <height>382</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_2"/>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QListWidget" name="Screenshots_PreviewList"/>
+       </item>
+      </layout>
      </widget>
     </widget>
    </item>

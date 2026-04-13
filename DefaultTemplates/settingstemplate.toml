@@ -4,14 +4,18 @@ theme = "system"
 onstartup = false
 startuptype = "minimized"
 interactiveselect = true
+selectedarea = "0x0x0x0"
+selectedprofile = "default"
+selectedproject = "default"
+selectedgroup = "default"
 
 [general.annotation]
 editortype = "buildin"
 editorpath = ""
 
 [general.backup]
-automatic = true
-freaquency = 7
+automatic = false
+frequency = 7
 keep = 1
 path = ""
 
@@ -23,10 +27,10 @@ language = "eng"
 [shortcuts]
 
 [shortcuts.screenshots]
-everything = "<ctrl>+<alt>+<insert>"
+everything = "Ctrl+Alt+Ins"
 selectedarea = ""
 selectarea = ""
-area = "<ctrl>+<cmd>+<insert>"
+area = "Meta+Ctrl+Ins"
 
 [shortcuts.windows]
 openmain = ""

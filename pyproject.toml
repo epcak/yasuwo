@@ -1,0 +1,11 @@
+[project]
+name = "yasuwo"
+version = "0.1.0"
+
+[tool.pyside6-project]
+files = ["CoreModules/Annotator.py", "CoreModules/Hotkey.py", "CoreModules/ScreenshotArea.py", "CoreModules/Screenshoter.py", "CoreModules/StartupChecker.py",
+    "DataModules/Configuration.py", "DataModules/DatabaseData.py", "DataModules/DatabaseTables.py",
+    "GraphicalModules/AboutWindow.py", "GraphicalModules/AnnotateWindow.py", "GraphicalModules/CheckWindow.py", "GraphicalModules/CustomAreaButtonsWindow.py", "GraphicalModules/CustomAreaDialog.py", "GraphicalModules/LibrariesWindow.py", "GraphicalModules/MainWindow.py", "GraphicalModules/ManageProfilesWindow.py", "GraphicalModules/ManageProjectsWindow.py", "GraphicalModules/ProjectGroupDialog.py", "GraphicalModules/ScreenshotsWindow.py", "GraphicalModules/ScreenshotViewWindow.py", "GraphicalModules/SearchWindow.py", "GraphicalModules/SettingsWindow.py", "GraphicalModules/ChangeProjectDialog.py",
+    "InterfaceLayout/AboutWindow.ui", "InterfaceLayout/AnnotateWindow.ui", "InterfaceLayout/CheckWindow.ui", "InterfaceLayout/CustomAreaButtonsWindow.ui", "InterfaceLayout/CustomAreaDialog.ui", "InterfaceLayout/LibrariesWindow.ui", "InterfaceLayout/MainWindow.ui", "InterfaceLayout/ManageProfilesWindow.ui", "InterfaceLayout/ManageProjectsWindow.ui", "InterfaceLayout/ProjectGroupDialog.ui", "InterfaceLayout/ScreenshotsWindow.ui", "InterfaceLayout/ScreenshotViewWindow.ui", "InterfaceLayout/SearchWindow.ui", "InterfaceLayout/SettingsWindow.ui", "InterfaceLayout/ChangeProjectDialog.ui",
+    "yasuwo.py",
+    "Languages/yasuwo-sk.ts"]

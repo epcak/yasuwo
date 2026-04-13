@@ -65,11 +65,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QComboBox" name="Settings_StartupCombobox">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-          </widget>
+          <widget class="QComboBox" name="Settings_StartupCombobox"/>
          </item>
         </layout>
        </item>
@@ -183,7 +179,7 @@
             <item>
              <widget class="QPushButton" name="Settings_PathEditorButton">
               <property name="enabled">
-               <bool>false</bool>
+               <bool>true</bool>
               </property>
               <property name="text">
                <string>Select path</string>
@@ -203,11 +199,14 @@
          <layout class="QVBoxLayout" name="verticalLayout_4">
           <item>
            <widget class="QCheckBox" name="Settings_AutomaticBackupsCheckbox">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
             <property name="text">
              <string>Enable automatic backups</string>
             </property>
             <property name="checked">
-             <bool>true</bool>
+             <bool>false</bool>
             </property>
            </widget>
           </item>
@@ -398,14 +397,14 @@
             <item>
              <widget class="QLineEdit" name="Settings_OcrInstallationPathLineedit">
               <property name="enabled">
-               <bool>false</bool>
+               <bool>true</bool>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QPushButton" name="Settings_InstallationPathButton">
               <property name="enabled">
-               <bool>false</bool>
+               <bool>true</bool>
               </property>
               <property name="text">
                <string>Select path</string>

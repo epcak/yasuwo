@@ -1,6 +1,7 @@
 from DataModules.Configuration import Configuration
 from DataModules.DatabaseTables import Project, Group
-from ScreenshotArea import ScreenshotArea
+from CoreModules.ScreenshotArea import ScreenshotArea
+from DataModules.Constants import APP_VERSION
 
 class CommandLineHandler:
     def __init__(self, config: Configuration):
@@ -10,7 +11,8 @@ class CommandLineHandler:
         pass
 
     def __version(self):
-        pass
+        """Prints version string"""
+        print("yasuwo version: " + APP_VERSION)
 
     def __takescreenshot(self, project: Project, group: Group, area: ScreenshotArea):
         pass

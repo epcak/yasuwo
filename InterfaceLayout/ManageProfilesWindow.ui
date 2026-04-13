@@ -132,7 +132,7 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
-       <widget class="QListView" name="ManageProfiles_CustomAreasListview"/>
+       <widget class="QListWidget" name="ManageProfiles_CustomAreasListWidget"/>
       </item>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_6">

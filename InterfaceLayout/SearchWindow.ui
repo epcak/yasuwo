@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>516</width>
+    <width>620</width>
     <height>464</height>
    </rect>
   </property>
@@ -115,11 +115,15 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>496</width>
-        <height>303</height>
+        <width>600</width>
+        <height>311</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_2"/>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QListWidget" name="Search_PreviewList"/>
+       </item>
+      </layout>
      </widget>
     </widget>
    </item>
