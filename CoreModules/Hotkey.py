@@ -31,8 +31,14 @@ class Hotkey:
                 listenersequence += "+"
             if key == "meta":
                 listenersequence += "<cmd>"
+            elif key == "ctrl":
+                listenersequence += "<ctrl>"
+            elif key == "alt":
+                listenersequence += "<alt>"
+            elif key == "shift":
+                listenersequence += "<shift>"
             elif key == "ins":
-                listenersequence += "<insert>"
+                listenersequence += f"{specialkeys["insert"]}"
             elif key in specialkeys.keys():
                 listenersequence += f"{specialkeys[key]}"
             else:
