@@ -11,7 +11,7 @@ class Backuper:
         documents = path.join(path.join(path.expanduser('~'), "Documents"))
         self.__datafolder = path.join(documents, "yasuwo")
         self.__automaticbackupname = "yasuwobackup:"
-        self.__datetimeformat = "%Y-%m-%d %H:%M:%S.%f"
+        self.__datetimeformat = "%Y-%m-%d %H;%M;%S.%f"
 
     def __backupdata(self, location: str, incscreenshot: bool, incconfig: bool, incdatabase: bool) -> bool:
         """Creates backup to zipfile
@@ -26,7 +26,7 @@ class Backuper:
             return False
         try:
             with zipfile.ZipFile(location, "w", zipfile.ZIP_DEFLATED, compresslevel=7) as archive:
-                name = "Created " + str(datetime.now()).replace(" ", "_")
+                name = "Created " + str(datetime.now()).replace(" ", "_").replace(":", ";")
                 with open(name, "w"):
                     pass
                 archive.write(name)
@@ -83,7 +83,7 @@ class Backuper:
                 foundrecent = True
                 break
         if not foundrecent:
-            if self.__backupdata(path.join(backupfolder, self.__automaticbackupname + str(datetime.now()).replace(" ", "_") + ".zip"), True, True, True):
+            if self.__backupdata(path.join(backupfolder, self.__automaticbackupname + str(datetime.now()).replace(" ", "_").replace(":", ";") + ".zip"), True, True, True):
                 if len(foundlist) >= int(keepnumber):
                     foundlist.sort()
                     foundlist.reverse()

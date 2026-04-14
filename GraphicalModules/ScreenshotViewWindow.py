@@ -1,3 +1,5 @@
+import platform
+
 from PySide6.QtGui import QPixmap, QGuiApplication
 from GraphicalModules.AnnotateWindow import AnnotateWindow
 from GraphicalModules.ChangeProjectDialog import ChangeProjectDialog
@@ -111,7 +113,11 @@ class ScreenshotViewWindow(QDialog):
                                                                                 "JPG file (*.jpg)"))
         savepath = file[0].path()
         if len(savepath) == 0: return
-        savepath += ".jpg"
+        if platform.system() == "Windows":
+            savepath = savepath[1:]
+            savepath = savepath.replace("/", "\\")
+        if not savepath.endswith((".jpg", ".jpeg")):
+            savepath += ".jpg"
         self.__screenshot.getannotatedimage().save(savepath, "JPEG")
 
     def __deleteevent(self):

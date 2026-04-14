@@ -26,7 +26,7 @@ class Screenshoter:
         taken = ImageGrab.grab()
         dt = datetime.now()
         takenrgb = taken.convert("RGB")
-        name = "Screenshot_" + str(dt).replace(" ", '_')
+        name = "Screenshot_" + str(dt).replace(" ", '_').replace(":", ";")
         takenrgb.save(path.join(self.__imageloc, name + ".jpeg"), "jpeg")
         self.__dbdata.createscreenshot(name=name, project=self.__selectedproject, group=self.__selectedgroup)
         return name
@@ -40,7 +40,7 @@ class Screenshoter:
         taken = ImageGrab.grab(bbox=area)
         dt = datetime.now()
         takenrgb = taken.convert("RGB")
-        name = "Screenshot_" + str(dt).replace(" ", '_')
+        name = "Screenshot_" + str(dt).replace(" ", '_').replace(":", ";")
         takenrgb.save(path.join(self.__imageloc, name + ".jpeg"), "jpeg")
         self.__dbdata.createscreenshot(name=name, project=self.__selectedproject, group=self.__selectedgroup)
         return name
@@ -71,7 +71,7 @@ class Screenshoter:
             picker = InteractiveAreaPicker()
             picker.exec()
             dt = datetime.now()
-            name = "Screenshot_" + str(dt).replace(" ", '_')
+            name = "Screenshot_" + str(dt).replace(" ", '_').replace(":", ";")
             time.sleep(0.1)
             taken = ImageGrab.grab(picker.getpickedarea()).convert("RGB")
             taken.save(path.join(self.__imageloc, name + ".jpeg"), "jpeg")
@@ -84,7 +84,7 @@ class Screenshoter:
             picker.exec()
             cropped = taken.crop(picker.getpickedarea())
             converted = cropped.convert("RGB")
-            name = "Screenshot_" + str(dt).replace(" ", '_')
+            name = "Screenshot_" + str(dt).replace(" ", '_').replace(":", ";")
             converted.save(path.join(self.__imageloc, name + ".jpeg"), "jpeg")
             self.__dbdata.createscreenshot(name=name, project=self.__selectedproject, group=self.__selectedgroup)
             return name

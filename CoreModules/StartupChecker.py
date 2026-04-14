@@ -1,3 +1,5 @@
+import platform
+
 from DataModules.Backup import Backuper
 from DataModules.Configuration import Configuration
 import pytesseract
@@ -22,6 +24,8 @@ class StartupChecker:
         :returns: ``True`` if app is fully functioning, ``False`` otherwise
         """
         self.__status["config"] = self.__config.initconfigs()
+        if platform.system() == "Windows":
+            pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
         if self.__config.getconfig("ocr.installation") == "own":
             pytesseract.pytesseract.tesseract_cmd = self.__config.getconfig("ocr.path")
         elif self.__config.getconfig("ocr.installation") != "system":

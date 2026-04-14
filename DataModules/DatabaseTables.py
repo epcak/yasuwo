@@ -278,7 +278,7 @@ class Screenshot(BaseModel):
     def getdatetime(self) -> datetime:
         """Returns datetime of screenshot creation"""
         datetimetext = str(self.name).replace("Screenshot_", "").replace("_", " ")
-        created = datetime.strptime(datetimetext, "%Y-%m-%d %H:%M:%S.%f")
+        created = datetime.strptime(datetimetext, "%Y-%m-%d %H;%M;%S.%f")
         return created
 
     def getimagetext(self) -> str:
