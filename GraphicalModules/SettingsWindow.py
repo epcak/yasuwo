@@ -297,11 +297,21 @@ class SettingsWindow(QDialog):
 
     def __applyevent(self):
         """Saves configuration without closing settings window"""
+        if self.ui.Settings_OcrOwnRadiobutton.isChecked():
+            self.__config.setconfig("ocr.installation", "own")
+        else:
+            self.__config.setconfig("ocr.installation", "system")
+        self.__config.setconfig("ocr.path", self.ui.Settings_OcrInstallationPathLineedit.text())
         self.__configcopy.saveconfig()
         self.__config.reloadconfig()
 
     def __okevent(self):
         """Saves configuration and closes settings window"""
+        if self.ui.Settings_OcrOwnRadiobutton.isChecked():
+            self.__config.setconfig("ocr.installation", "own")
+        else:
+            self.__config.setconfig("ocr.installation", "system")
+        self.__config.setconfig("ocr.path", self.ui.Settings_OcrInstallationPathLineedit.text())
         self.__configcopy.saveconfig()
         self.__config.reloadconfig()
         self.close()
