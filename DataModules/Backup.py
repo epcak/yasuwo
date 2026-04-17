@@ -10,7 +10,7 @@ class Backuper:
     def __init__(self):
         documents = path.join(path.join(path.expanduser('~'), "Documents"))
         self.__datafolder = path.join(documents, "yasuwo")
-        self.__automaticbackupname = "yasuwobackup:"
+        self.__automaticbackupname = "yasuwobackup;"
         self.__datetimeformat = "%Y-%m-%d %H;%M;%S.%f"
 
     def __backupdata(self, location: str, incscreenshot: bool, incconfig: bool, incdatabase: bool) -> bool:
