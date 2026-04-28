@@ -72,13 +72,24 @@ class CustomAreaButtonsWindow(QDialog):
             if area["name"] == selected.text():
                 selectedarea = area["bbox"]
                 break
-        if selectedarea == "0x0x0x0" or selectedarea == "":
+        if selectedarea == "0x0x0x0" or selectedarea == "" or selectedarea is None or selectedarea == [0, 0, 0, 0]:
             self.__scrshoter.takefullscreenscreenshot()
         else:
-            sarea = []
-            for point in selectedarea.split("x"):
-                sarea.append(int(point))
-            self.__scrshoter.takeareascreenshot(tuple(sarea))
+            area = [0 ,0, 0, 0]
+            selectedarea = selectedarea.split("x")
+            if int(selectedarea[0]) < int(selectedarea[2]):
+                area[0] = int(selectedarea[0])
+                area[2] = int(selectedarea[2])
+            else:
+                area[2] = int(selectedarea[0])
+                area[0] = int(selectedarea[2])
+            if int(selectedarea[1]) < int(selectedarea[3]):
+                area[1] = int(selectedarea[1])
+                area[3] = int(selectedarea[3])
+            else:
+                area[3] = int(selectedarea[1])
+                area[1] = int(selectedarea[3])
+            self.__scrshoter.takeareascreenshot(area)
 
     def __manageprofileevent(self):
         """Opens window for managing profiles with selected profile"""
