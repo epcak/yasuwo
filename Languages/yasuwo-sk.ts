@@ -563,7 +563,7 @@
     <message>
         <location filename="../InterfaceLayout/MainWindow.ui" line="82"/>
         <source>Screenshot everything</source>
-        <translation>Vytvoriť snínku celej plochy</translation>
+        <translation>Vytvoriť snímku celej plochy</translation>
     </message>
     <message>
         <location filename="../InterfaceLayout/MainWindow.ui" line="95"/>
