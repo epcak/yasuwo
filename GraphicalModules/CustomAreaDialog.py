@@ -73,8 +73,9 @@ class CustomAreaDialog(QDialog, Ui_CustomAreaDialog_UI):
             changes = True
         if self.__shortcut != self.__area["sequence"]:
             changes = True
-        if self.__bbox != None:
-            self.__area["bbox"] = self.__bbox
+        if self.__bbox is not None:
+            self.__area["bbox"] = f"{self.__bbox[0]}x{self.__bbox[1]}x{self.__bbox[2]}x{self.__bbox[3]}"
+            changes = True
         active: bool = self.ui.CustomArea_EnabledShortcutCheckbox.isChecked()
         if active != self.__area["active"]:
             changes = True

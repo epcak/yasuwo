@@ -114,6 +114,11 @@ class MainWindow(QMainWindow):
         """Opens Window with custom screenshots"""
         subwindow = CustomAreaButtonsWindow(self.__profile, self.__config, self.__dbdata, self.__scrshoter)
         subwindow.exec()
+        newprof = Profile.select().where(Profile.id == self.__profile.id)
+        if len(newprof) == 0:
+            self.__reloadprofiles()
+        else:
+            self.__profile = newprof.get()
         self.__reloadprofilehotkeys()
 
     def __selectareaevent(self):

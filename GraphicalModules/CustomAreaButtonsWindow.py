@@ -96,6 +96,15 @@ class CustomAreaButtonsWindow(QDialog):
         subwindow = ManageProfilesWindow(self.__config, self.__dbdata)
         subwindow.selectprofile(self.__profile)
         subwindow.exec()
+        newprofile = Profile.select().where(Profile.id == self.__profile.id)
+        if len(newprofile) == 0:
+            self.__profile = Profile.select().first()
+        else:
+            self.__profile = newprofile.get()
+        self.ui.CustomAreasButtons_AreasListWidget.clear()
+        if self.__profile.getconfig("areas") is not None:
+            for area in self.__profile.getconfig("areas"):
+                self.ui.CustomAreasButtons_AreasListWidget.addItem(area["name"])
 
     def __closeevent(self):
         """Closes window"""
